@@ -15,8 +15,8 @@ namespace _04_Loops
             while (total++ < 100)
             {
                 // total = total + 1;
-               // total += 1;
-               // total++;
+                // total += 1;
+                // total++;
                 Console.WriteLine("Total: " + total);
             }
 
@@ -27,7 +27,7 @@ namespace _04_Loops
             Random randy = new Random();
             int someNumber = randy.Next(0, 21);
 
-            while(true)
+            while (true)
             {
                 someNumber = randy.Next(0, 21);
                 Console.WriteLine(someNumber);
@@ -60,7 +60,7 @@ namespace _04_Loops
             stringList.Add("hello");
             stringList.Add("world");
             stringList.Add("banana");
-            foreach(string word in stringList)
+            foreach (string word in stringList)
             {
                 Console.WriteLine(word);
             }
@@ -69,6 +69,35 @@ namespace _04_Loops
             for (int i = 0; i < 100; i++)
             {
                 Console.WriteLine(i);
+            }
+        }
+
+        [TestMethod]
+        public void Challenge()
+        {
+            string poppins = "Supercalifragilisticexpialidocious.";
+            foreach (char letter in poppins)
+            {
+                if (letter == 'i' || letter == 'l')
+                {
+                    Console.WriteLine(letter);
+                }
+                else if (letter == 'l')
+                {
+                   Console.WriteLine( "l");
+                }
+
+
+                else
+                {
+                    Console.WriteLine("Not an 'i'");
+                }
+
+                Console.WriteLine(poppins.Length);
+                for (int i=0; poppins.Length; 1++)
+                {
+                    char letter = poppins[i];
+                }
             }
         }
     }
